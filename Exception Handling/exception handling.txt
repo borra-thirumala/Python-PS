@@ -1,0 +1,3 @@
+Exception Handling in Python – Theory
+✅ Definition:
+Exception handling in Python is a mechanism to respond to errors (also called exceptions) that occur during the execution of a program. Instead of the program crashing abruptly, exception handling allows developers to manage the error gracefully.
