@@ -101,6 +101,29 @@
 #     print(e) 
 
 
+# try:
+#     age=int(input("enter the age: "))
+#     if age<0:
+#         raise Exception("invalid age")
+# except Exception as error:
+#     print({"error:error"})
+# else:
+#     print(age)
+# print("hello")
+
+
+# enter the age: 20
+# 20
+# hello
+
+
+# enter the age: -5
+# {'error:error'}
+# hello
+
+
+
+
 #String formatting
 
 # def show_name(n):
@@ -120,3 +143,10 @@
 
 # age=int(input("enter the age: "))
 # print(f"the age is: {age}")
+
+
+# try:
+#     print(10/0)
+# except Exception as error:
+#     print({"error":error})  op:will come in dict {'error': ZeroDivisionError('division by zero')}
+# print("hello")              hello
