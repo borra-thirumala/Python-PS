@@ -1,0 +1,149 @@
+Exception Handling in Python – Theory
+✅ Definition:
+Exception handling in Python is a mechanism to respond to errors (also called exceptions) that occur during the execution of a program. 
+Instead of the program crashing abruptly, exception handling allows developers to manage the error gracefully.
+
+
+✅ What is an Exception?
+An exception is an unwanted or unexpected event that disrupts the normal flow of a program. 
+Examples include:
+
+Division by zero
+
+Accessing an invalid index in a list
+
+Trying to open a non-existent file
+
+✅ Why is Exception Handling Important?
+Prevents the program from terminating unexpectedly.
+
+Helps developers identify and fix bugs.
+
+Ensures the program continues executing even after an error.
+
+Allows handling different errors in different ways.
+
+✅ Keywords Used in Python Exception Handling:
+try:
+Block of code where exceptions might occur.
+Python first executes this block.
+
+except:
+Block of code that handles the exception if one occurs.
+You can handle specific exception types like ValueError, ZeroDivisionError, etc.
+
+else (optional):
+Executes if no exception occurs in the try block.
+
+finally (optional):
+Executes no matter what—whether an exception occurred or not.
+Useful for cleaning up resources (like closing files).
+
+✅ Types of Common Exceptions:
+Exception	Occurs When...
+ZeroDivisionError	Division by zero
+ValueError	Invalid value given (e.g., converting "abc" to int)
+TypeError	Operation on incompatible data types
+IndexError	Accessing an index that doesn’t exist in a list
+KeyError	Accessing a key that doesn’t exist in a dictionary
+FileNotFoundError	Trying to open a file that doesn’t exist
+
+✅ Multiple Exceptions:
+Python allows handling multiple exceptions separately or together.
+
+
+try:
+    # risky code
+except ValueError:
+    # handle ValueError
+except ZeroDivisionError:
+    # handle ZeroDivisionError
+
+
+Or combine:
+except (ValueError, TypeError):
+    # handle either ValueError or TypeError
+
+
+✅ Raising Exceptions:
+Python also allows developers to raise exceptions manually using the raise keyword.
+raise ValueError("Custom error message")
+This is useful for input validation and enforcing constraints.
+
+✅ Custom Exceptions:
+You can create user-defined exceptions by inheriting from the built-in Exception class.
+class MyError(Exception):
+    pass
+raise MyError("Something went wrong")
+
+✅ Conclusion:
+Exception handling is a crucial part of Python programming. It improves the reliability, readability, and user-friendliness of your code by ensuring that errors are managed properly instead of leading to program crashes.
+
+
+
+
+
+
+What is String Formatting?
+String formatting is the process of inserting variables, values, or expressions into a string to make it more readable and dynamic.
+
+Python provides three main ways to format strings:
+
+🔸 1. f-strings (Python 3.6+)
+🔸 2. .format() method
+🔸 3. % operator (older style)
+
+✅ 1. f-strings (Formatted String Literals) – Modern and Recommended
+🔹 Syntax:
+name = "Alice"
+print(f"Hello, {name}!")
+🔹 Explanation:
+Prefix the string with f or F.
+
+Place variables or expressions inside {}.
+
+Easy to read and fastest in performance.
+
+🔹 Example:
+name = "John"
+age = 25
+print(f"My name is {name} and I am {age} years old.")
+
+✅ Output:
+My name is John and I am 25 years old.
+
+
+
+
+✅ 2. str.format() method
+🔹 Syntax:
+"string {}".format(value)
+🔹 Example:
+name = "Lisa"
+age = 22
+print("My name is {} and I am {} years old.".format(name, age))
+
+✅ Output:
+My name is Lisa and I am 22 years old.
+
+🔹 You can also use indexes or variable names:
+print("My name is {0} and I am {1} years old.".format(name, age))
+print("My name is {n} and I am {a} years old.".format(n=name, a=age))
+
+
+✅ 3. Old Style % Formatting – Legacy (not recommended for new code)
+🔹 Syntax:
+"string %s" % value
+🔹 Example:
+name = "Emma"
+age = 30
+print("My name is %s and I am %d years old." % (name, age))
+Output:
+My name is Emma and I am 30 years old.
+
+ Comparison Table
+Method	Syntax Style	Readability	Recommended?
+f-strings	f"Hello {name}"	 Easy	Yes
+str.format	"Hello {}".format()	
+% formatting	"Hello %s" % value	
+
