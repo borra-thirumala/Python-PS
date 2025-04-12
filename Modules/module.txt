@@ -1,0 +1,13 @@
+Modules:
+
+1.built-in Modules
+
+math,random,time,re,os
+
+2.custom or user defined
+create a file with .py extension and import them
+
+3.third party Modules
+installed from other sources
+installed using pip
+pip install numpy pandas matplotlib scikit-learn
