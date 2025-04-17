@@ -33,6 +33,11 @@
 # import math
 # print(math.pi)        #op:3.141592653589793
 
+# import math
+# print(math.ceil(1.2))  op:2    #Return the ceiling of x as an Integral.This is the smallest integer >= x.
+# print(math.floor(3.9))   op:3
+
+
 
 
 #Perfect Square of a number
